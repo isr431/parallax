@@ -4,6 +4,19 @@ on:
   schedule:
     - cron: "17 */3 * * *"
   workflow_dispatch:
+    inputs:
+      fail_source:
+        description: Optional source stub to fail for partial-success verification
+        required: false
+        type: choice
+        default: none
+        options:
+          - none
+          - gdelt
+          - cloudflare
+          - usgs-gdacs
+          - firms
+          - fred
 
 permissions:
   contents: write
@@ -17,16 +30,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out main
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Check out data branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: data
           path: data-branch
 
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 24
           cache: npm
@@ -39,6 +52,7 @@ jobs:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
           FIRMS_MAP_KEY: ${{ secrets.FIRMS_MAP_KEY }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          PARALLAX_FAIL_SOURCE: ${{ inputs.fail_source }}
         run: npm run pipeline -- --output-dir generated-data
 
       - name: Copy generated data
