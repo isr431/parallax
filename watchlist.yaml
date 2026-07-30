@@ -1,0 +1,42 @@
+entities:
+  - id: ukraine
+    type: country
+    gdelt_query: 'sourcecountry:UP OR Ukraine'
+    threshold: 2.5
+    firms_bbox: [22.1, 44.2, 40.2, 52.4]
+    radar_location: UA
+    fred_series: [DEXUSEU]
+
+  - id: sudan
+    type: country
+    gdelt_query: 'sourcecountry:SU OR Sudan'
+    threshold: 2.5
+    firms_bbox: [21.8, 8.7, 38.6, 22.2]
+    radar_location: SD
+
+  - id: china-taiwan
+    type: pair
+    gdelt_query: '(China OR Chinese) (Taiwan OR Taiwanese)'
+    threshold: 2.5
+    radar_location: TW
+    fred_series: [DEXCHUS]
+
+  - id: israel-gaza
+    type: pair
+    gdelt_query: '(Israel OR Israeli) (Gaza OR Palestinian)'
+    threshold: 2.5
+    firms_bbox: [34.1, 29.4, 35.9, 33.4]
+    radar_location: IL
+
+  - id: red-sea-shipping
+    type: topic
+    gdelt_query: '"Red Sea" (shipping OR tanker OR blockade OR Houthi)'
+    threshold: 2.5
+    fred_series: [DCOILBRENTEU]
+
+  - id: arctic-shipping
+    type: topic
+    gdelt_query: '"Arctic" ("Northern Sea Route" OR shipping OR icebreaker)'
+    threshold: 2.8
+    fred_series: [DCOILBRENTEU]
+

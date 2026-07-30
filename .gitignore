@@ -1,0 +1,7 @@
+.DS_Store
+node_modules/
+dist/
+generated-data/
+data/
+data-branch/
+.env
