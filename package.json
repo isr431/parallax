@@ -10,7 +10,8 @@
     "build": "tsc --noEmit",
     "pipeline": "tsx pipeline/index.ts",
     "test": "tsx --test pipeline/**/*.test.ts",
-    "frontend": "node -e \"console.log('Frontend is introduced in Step 4; see PROGRESS.md')\""
+    "frontend": "node -e \"console.log('Frontend is introduced in Step 4; see PROGRESS.md')\"",
+    "build:frontend": "node -e \"console.log('Frontend build is introduced in Step 4; see PROGRESS.md')\""
   },
   "dependencies": {
     "yaml": "^2.8.1"
@@ -21,4 +22,3 @@
     "typescript": "^5.9.3"
   }
 }
-
