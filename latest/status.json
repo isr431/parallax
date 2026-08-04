@@ -1,33 +1,33 @@
 {
-  "generated_at": "2026-08-04T14:40:33.883Z",
+  "generated_at": "2026-08-04T17:04:23.965Z",
   "sources": [
     {
       "source": "gdelt",
-      "last_success": "2026-08-04T14:40:33.883Z",
+      "last_success": "2026-08-04T17:04:23.965Z",
       "last_error": null,
       "records": 0
     },
     {
       "source": "cloudflare",
-      "last_success": "2026-08-04T14:40:33.883Z",
+      "last_success": "2026-08-04T17:04:23.965Z",
       "last_error": null,
       "records": 0
     },
     {
       "source": "usgs-gdacs",
-      "last_success": "2026-08-04T14:40:33.883Z",
+      "last_success": "2026-08-04T17:04:23.965Z",
       "last_error": null,
       "records": 0
     },
     {
       "source": "firms",
-      "last_success": "2026-08-04T14:40:33.883Z",
+      "last_success": "2026-08-04T17:04:23.965Z",
       "last_error": null,
       "records": 0
     },
     {
       "source": "fred",
-      "last_success": "2026-08-04T14:40:33.883Z",
+      "last_success": "2026-08-04T17:04:23.965Z",
       "last_error": null,
       "records": 0
     }
